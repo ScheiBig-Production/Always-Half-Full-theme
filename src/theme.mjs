@@ -863,6 +863,11 @@ export function getTheme(from) {
 			"pullRequests.merged": col.tok?.purple,
 			"pullRequests.notification": col.tok?.azure,
 			"pullRequests.open": col.tok?.green,
+			// :: == == ==
+			// || Region marker extension
+			// :: ==
+			"regionmarker.background": t(col.tok?.lilac, opa.bg?.m4),
+			"regionmarker.foreground": col.tok?.lilac,
 		},
 		"tokenColors": [
 			{
@@ -873,6 +878,8 @@ export function getTheme(from) {
 					"variable.other.jsdoc",
 					// PHP variables
 					"variable.other.php",
+					// Bash variables
+					"variable.other.normal.shell",
 				],
 				"settings": {
 					"foreground": col.txt?.m1
@@ -946,6 +953,8 @@ export function getTheme(from) {
 					"punctuation.other.colon.go",
 					"punctuation.other.period.go",
 					"punctuation.other.comma.go",
+					// TOML
+					"punctuation.eq.toml",
 				],
 				"settings": {
 					"foreground": col.txt?.m2,
@@ -1051,6 +1060,7 @@ export function getTheme(from) {
 					"variable.language.this",
 					"variable.language.super",
 					"storage",
+					"storage.type.primitive.groovy",
 					// CSS pseudo-elements and media primitives
 					"entity.other.attribute-name.pseudo-element",
 					"entity.other.attribute-name.pseudo-element punctuation.definition.entity", // `::` prefix
@@ -1090,10 +1100,27 @@ export function getTheme(from) {
 					// Regex groups
 					"punctuation.definition.group.regexp",
 					// Git commit message changed lines
-					"markup.changed.git-commit"
+					"markup.changed.git-commit",
+					// Groovy function-ish
+					"meta.method.groovy",
 				],
 				"settings": {
 					"foreground": col.tok?.orange
+				}
+			},
+			{
+				"scope": [
+					// YAML Dates
+					"constant.other.timestamp.yaml",
+					// TOML Dates
+					"constant.other.time.time.toml",
+					"constant.other.time.date.toml",
+					"constant.other.time.datetime.local.toml",
+					"constant.other.time.datetime.offset.toml",
+				],
+				"settings": {
+					"foreground": col.tok?.orange,
+					"fontStyle": "",
 				}
 			},
 			{
@@ -1111,7 +1138,9 @@ export function getTheme(from) {
 					// XML-like language tag angle brackets
 					"punctuation.definition.tag",
 					// Regex line anchors
-					"keyword.control.anchor.regexp"
+					"keyword.control.anchor.regexp",
+					// Aggregate functions in SQL
+					"support.function.aggregate.sql",
 				],
 				"settings": {
 					"foreground": col.tok?.golden
@@ -1121,7 +1150,10 @@ export function getTheme(from) {
 				"scope": [
 					// Python `self` / `cls` parameter
 					"variable.parameter.function.language.special.self.python",
-					"variable.parameter.function.language.special.cls.python"
+					"variable.parameter.function.language.special.cls.python",
+					// Bash auto-variables and build-ins
+					"variable.language.special.shell",
+					"support.function.builtin.shell",
 				],
 				"settings": {
 					"foreground": col.tok?.golden,
@@ -1187,7 +1219,10 @@ export function getTheme(from) {
 					"keyword.other.unit.octal.cpp", // `0` C++
 					"keyword.other.unit.binary.cpp", // `0b` C++
 					// Regex quantity specifiers
-					"keyword.operator.quantifier.regexp"
+					"keyword.operator.quantifier.regexp",
+					// Bash expression evaluation
+					"punctuation.section.arithmetic.double.shell",
+					"punctuation.definition.logical-expression.shell",
 				],
 				"settings": {
 					"foreground": col.tok?.green,
@@ -1221,18 +1256,16 @@ export function getTheme(from) {
 			},
 			{
 				"scope": [
-					// CSS classes in html props
-					"meta.attribute.class string",
-					// CSS classes
-					"entity.other.attribute-name.class",
-					"entity.other.attribute-name.class punctuation.definition.entity", //  `.` prefix
 					// Formatting utilities
 					"storage.type.format.python",
-					"constant.other.placeholder"
+					"constant.other.placeholder",
+					"keyword.operator.expansion.shell",
+					// Groovy class types
+					"storage.type.groovy",
 				],
 				"settings": {
 					"foreground": col.tok?.azure,
-					"fontStyle": "italic"
+					"fontStyle": ""
 				}
 			},
 			{
@@ -1244,9 +1277,6 @@ export function getTheme(from) {
 					"storage.type.java",
 					// Type tags in YAML
 					"storage.type.tag-handle.yaml",
-					// Sections in INI
-					"punctuation.definition.entity.ini",
-					"entity.name.section.group-title.ini",
 					// CSS pseudo-classes
 					"entity.other.attribute-name.pseudo-class",
 					"entity.other.attribute-name.pseudo-class punctuation.definition.entity.css", // `:` prefix
@@ -1271,6 +1301,11 @@ export function getTheme(from) {
 			},
 			{
 				"scope": [
+					// CSS classes in html props
+					"meta.attribute.class string",
+					// CSS classes
+					"entity.other.attribute-name.class",
+					"entity.other.attribute-name.class punctuation.definition.entity", //  `.` prefix
 					// Traits
 					"entity.name.type.trait.php",
 					// Interfaces
@@ -1287,7 +1322,9 @@ export function getTheme(from) {
 					"markup.heading.markdown",
 					"punctuation.definition.heading.markdown",
 					"markup.heading.setext.1.markdown",
-					"markup.heading.setext.2.markdown"
+					"markup.heading.setext.2.markdown",
+					// Bash background process
+					"punctuation.separator.statement.background.shell",
 				],
 				"settings": {
 					"foreground": col.tok?.azure,
@@ -1477,6 +1514,11 @@ export function getTheme(from) {
 					// YAML directives
 					"support.other.directive",
 					"punctuation.definition.directive", // `%` prefix
+					// Tables in TOML
+					"support.type.property-name.table.toml",
+					// Sections in INI
+					"punctuation.definition.entity.ini",
+					"entity.name.section.group-title.ini",
 					// XML directives (?xml)
 					"meta.tag.preprocessor entity.name.tag",
 					"meta.tag.preprocessor.xml punctuation.definition.tag.xml",
@@ -1531,6 +1573,7 @@ export function getTheme(from) {
 					"meta.function.parameter.typehinted.php variable.other.php",
 					"meta.function.parameter.default.php variable.other.php",
 					"meta.function.parameter.no-default.php variable.other.php",
+					"constant.other.option",
 				],
 				"settings": {
 					"foreground": col.tok?.lavender,
@@ -1585,7 +1628,16 @@ export function getTheme(from) {
 					// Template string embedded expression delimiters
 					"punctuation.definition.template-expression",
 					"constant.character.format.placeholder",
+					"punctuation.section.embedded",
+					// Bash expansions and subs
 					"punctuation.definition.interpolation",
+					"punctuation.definition.variable.shell",
+					"punctuation.definition.variable.shell variable.other.normal.shell",
+					"punctuation.definition.subshell",
+					"punctuation.definition.group.shell",
+					"punctuation.section.parenthese.shell",
+					"string.interpolated.process-substitution.shell",
+					"string.interpolated.process-substitution.shell punctuation.definition.string",
 					// Blade expressions
 					"support.function.construct.begin.blade",
 					"support.function.construct.end.blade",
@@ -1594,7 +1646,10 @@ export function getTheme(from) {
 					// Regex look-behind
 					"meta.assertion.look-behind.regexp",
 					// Markdown link labels
-					"string.other.link.title.markdown"
+					"string.other.link.title.markdown",
+					// Shebangs
+					"comment.line.shebang",
+					"meta.shebang.shell",
 				],
 				"settings": {
 					"foreground": col.tok?.lilac,

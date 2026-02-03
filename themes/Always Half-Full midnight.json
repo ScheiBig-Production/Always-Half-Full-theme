@@ -91,7 +91,8 @@
 			"scope": [
 				"meta.template.expression variable.other.readwrite",
 				"variable.other.jsdoc",
-				"variable.other.php"
+				"variable.other.php",
+				"variable.other.normal.shell"
 			],
 			"settings": {}
 		},
@@ -149,7 +150,8 @@
 				"meta.link.email.lt-gt.markdown",
 				"punctuation.other.colon.go",
 				"punctuation.other.period.go",
-				"punctuation.other.comma.go"
+				"punctuation.other.comma.go",
+				"punctuation.eq.toml"
 			],
 			"settings": {
 				"fontStyle": ""
@@ -230,6 +232,7 @@
 				"variable.language.this",
 				"variable.language.super",
 				"storage",
+				"storage.type.primitive.groovy",
 				"entity.other.attribute-name.pseudo-element",
 				"entity.other.attribute-name.pseudo-element punctuation.definition.entity",
 				"support.constant.media",
@@ -257,9 +260,22 @@
 				"entity.name.function",
 				"support.function",
 				"punctuation.definition.group.regexp",
-				"markup.changed.git-commit"
+				"markup.changed.git-commit",
+				"meta.method.groovy"
 			],
 			"settings": {}
+		},
+		{
+			"scope": [
+				"constant.other.timestamp.yaml",
+				"constant.other.time.time.toml",
+				"constant.other.time.date.toml",
+				"constant.other.time.datetime.local.toml",
+				"constant.other.time.datetime.offset.toml"
+			],
+			"settings": {
+				"fontStyle": ""
+			}
 		},
 		{
 			"scope": [
@@ -272,14 +288,17 @@
 		{
 			"scope": [
 				"punctuation.definition.tag",
-				"keyword.control.anchor.regexp"
+				"keyword.control.anchor.regexp",
+				"support.function.aggregate.sql"
 			],
 			"settings": {}
 		},
 		{
 			"scope": [
 				"variable.parameter.function.language.special.self.python",
-				"variable.parameter.function.language.special.cls.python"
+				"variable.parameter.function.language.special.cls.python",
+				"variable.language.special.shell",
+				"support.function.builtin.shell"
 			],
 			"settings": {
 				"fontStyle": "bold"
@@ -327,7 +346,9 @@
 				"keyword.other.unit.hexadecimal.cpp",
 				"keyword.other.unit.octal.cpp",
 				"keyword.other.unit.binary.cpp",
-				"keyword.operator.quantifier.regexp"
+				"keyword.operator.quantifier.regexp",
+				"punctuation.section.arithmetic.double.shell",
+				"punctuation.definition.logical-expression.shell"
 			],
 			"settings": {
 				"fontStyle": "bold"
@@ -355,14 +376,13 @@
 		},
 		{
 			"scope": [
-				"meta.attribute.class string",
-				"entity.other.attribute-name.class",
-				"entity.other.attribute-name.class punctuation.definition.entity",
 				"storage.type.format.python",
-				"constant.other.placeholder"
+				"constant.other.placeholder",
+				"keyword.operator.expansion.shell",
+				"storage.type.groovy"
 			],
 			"settings": {
-				"fontStyle": "italic"
+				"fontStyle": ""
 			}
 		},
 		{
@@ -370,8 +390,6 @@
 				"entity.name.type",
 				"storage.type.java",
 				"storage.type.tag-handle.yaml",
-				"punctuation.definition.entity.ini",
-				"entity.name.section.group-title.ini",
 				"entity.other.attribute-name.pseudo-class",
 				"entity.other.attribute-name.pseudo-class punctuation.definition.entity.css",
 				"entity.name.tag support.class.component",
@@ -389,6 +407,9 @@
 		},
 		{
 			"scope": [
+				"meta.attribute.class string",
+				"entity.other.attribute-name.class",
+				"entity.other.attribute-name.class punctuation.definition.entity",
 				"entity.name.type.trait.php",
 				"entity.name.type.interface.php"
 			],
@@ -401,7 +422,8 @@
 				"markup.heading.markdown",
 				"punctuation.definition.heading.markdown",
 				"markup.heading.setext.1.markdown",
-				"markup.heading.setext.2.markdown"
+				"markup.heading.setext.2.markdown",
+				"punctuation.separator.statement.background.shell"
 			],
 			"settings": {
 				"fontStyle": "bold"
@@ -507,6 +529,9 @@
 				"entity.other.document",
 				"support.other.directive",
 				"punctuation.definition.directive",
+				"support.type.property-name.table.toml",
+				"punctuation.definition.entity.ini",
+				"entity.name.section.group-title.ini",
 				"meta.tag.preprocessor entity.name.tag",
 				"meta.tag.preprocessor.xml punctuation.definition.tag.xml",
 				"meta.assertion.look-ahead.regexp",
@@ -545,7 +570,8 @@
 				"entity.name.variable.parameter.php",
 				"meta.function.parameter.typehinted.php variable.other.php",
 				"meta.function.parameter.default.php variable.other.php",
-				"meta.function.parameter.no-default.php variable.other.php"
+				"meta.function.parameter.no-default.php variable.other.php",
+				"constant.other.option"
 			],
 			"settings": {
 				"fontStyle": "bold"
@@ -587,12 +613,22 @@
 				"punctuation.separator.label",
 				"punctuation.definition.template-expression",
 				"constant.character.format.placeholder",
+				"punctuation.section.embedded",
 				"punctuation.definition.interpolation",
+				"punctuation.definition.variable.shell",
+				"punctuation.definition.variable.shell variable.other.normal.shell",
+				"punctuation.definition.subshell",
+				"punctuation.definition.group.shell",
+				"punctuation.section.parenthese.shell",
+				"string.interpolated.process-substitution.shell",
+				"string.interpolated.process-substitution.shell punctuation.definition.string",
 				"support.function.construct.begin.blade",
 				"support.function.construct.end.blade",
 				"storage.type.generic.wildcard.java",
 				"meta.assertion.look-behind.regexp",
-				"string.other.link.title.markdown"
+				"string.other.link.title.markdown",
+				"comment.line.shebang",
+				"meta.shebang.shell"
 			],
 			"settings": {
 				"fontStyle": ""

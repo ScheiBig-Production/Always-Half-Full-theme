@@ -2,6 +2,18 @@
 
 All notable changes to the "always--half-full" extension will be documented in this file.
 
+## [0.9.3] - 2026.02.03
+
+Add support for following languages:
+- shellscript (bash) - via not-so-great, build-in parser,
+- TOML - via `tamasfe.even-better-toml`,
+- Groovy - added all existing, missing tokens; support however is extremely poor
+  and does not get better with any extensions.
+
+Tweaked YAML and ini to better align with TOML.
+
+Added build script to package.json for better DX.
+
 ## [0.9.2] - 2025.01.16
 
 Update repository references.

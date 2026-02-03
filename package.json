@@ -48,5 +48,8 @@
                 "path": "./themes/Always Half-Full starlight.json"
             }
         ]
+    },
+    "scripts": {
+        "build": "node build.mjs"
     }
 }
