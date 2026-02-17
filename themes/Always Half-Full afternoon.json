@@ -870,6 +870,9 @@
 		"class.readonly": {
 			"fontStyle": "bold"
 		},
+		"class.static": {
+			"fontStyle": "underline"
+		},
 		"enum": {
 			"fontStyle": "bold underline"
 		},

@@ -1544,6 +1544,10 @@
 			"foreground": "#007de4",
 			"fontStyle": "bold"
 		},
+		"class.static": {
+			"foreground": "#007de4",
+			"fontStyle": "underline"
+		},
 		"enum": {
 			"foreground": "#007de4",
 			"fontStyle": "bold underline"

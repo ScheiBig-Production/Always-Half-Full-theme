@@ -1962,6 +1962,10 @@ export function getTheme(from) {
 				"foreground": col.tok?.azure,
 				"fontStyle": "bold"
 			},
+			"class.static": {
+				"foreground": col.tok?.azure,
+				"fontStyle": "underline"
+			},
 			"enum": {
 				"foreground": col.tok?.azure,
 				"fontStyle": "bold underline"
